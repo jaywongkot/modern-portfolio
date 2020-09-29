@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block title %}Portfolio{% endblock title %}
+
+{% block content %}
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+        <div class="menu-branding">
+            <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+            <li class="nav-item">
+            <a href="{% url 'home' %}" class="nav-link">
+                Home
+            </a>
+            </li>
+            <li class="nav-item">
+            <a href="{% url 'about' %}" class="nav-link">
+                About Me
+            </a>
+            </li>
+            <li class="nav-item current">
+            <a href="{% url 'portfolio' %}" class="nav-link">
+                My Work
+            </a>
+            </li>
+            <li class="nav-item">
+            <a href="#" class="nav-link">
+                Blog
+            </a>
+            </li>
+            <li class="nav-item">
+            <a href="{% url 'contact' %}" class="nav-link">
+                How To Reach Me
+            </a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+
+  <main id="work">
+    <h1 class="lg-heading">
+      My <span class="text-secondary">work</span>
+    </h1>
+    <h2 class="sm-heading">
+      Check out some of my projects...
+    </h2>
+    <div class="projects">
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project1.jpg" alt="Projects">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Project
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project2.jpg" alt="Projects">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Project
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project3.jpg" alt="Projects">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Project
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project4.jpg" alt="Projects">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Project
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> Github
+        </a>
+      </div>
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project5.jpg" alt="Projects">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Project
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project6.jpg" alt="Projects">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Project
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project7.jpg" alt="Projects">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Project
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+{% endblock content %}
+
+{% block footer %}
+  <footer id="main-footer">
+    Copyright &copy; 2020
+  </footer>
+{% endblock footer %}
