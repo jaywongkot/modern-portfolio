@@ -1,0 +1,12 @@
+<!– The path and name for this file should be "templates/admin/base_site.html". –>
+<!– This add a favicon to django admin template –>
+<!– It overrides the original admin template and will be picked up by all of its children. –>
+<!– This template override has been verified for Django 3.1. –>
+
+{% extends "admin/base_site.html" %}
+
+{% load static %}
+
+{% block extrahead %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico'' %}" />
+{% endblock %}
