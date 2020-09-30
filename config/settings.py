@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os  # new
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -127,4 +127,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]  # new
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = [str(BASE_DIR.joinpath('media'))]  # new
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # new
+# MEDIA_ROOT = [str(BASE_DIR.joinpath('media'))]  # doesn't work
