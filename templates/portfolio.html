@@ -52,83 +52,19 @@
       Check out some of my projects...
     </h2>
     <div class="projects">
+      {% for project in all_project_list %}
       <div class="item">
         <a href="#!">
-          <img src="img/projects/project1.jpg" alt="Projects">
+          <img src="{{ project.image.url }}" alt="{{ project.title }}">
         </a>
         <a href="#" class="btn-light">
-          <i class="fas fa-eye"></i> Project
+          <i class="fas fa-eye"></i> {{ project.title }}
         </a>
         <a href="#" class="btn-dark">
           <i class="fab fa-github"></i> GitHub
         </a>
       </div>
-      <div class="item">
-        <a href="#!">
-          <img src="img/projects/project2.jpg" alt="Projects">
-        </a>
-        <a href="#" class="btn-light">
-          <i class="fas fa-eye"></i> Project
-        </a>
-        <a href="#" class="btn-dark">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-      <div class="item">
-        <a href="#!">
-          <img src="img/projects/project3.jpg" alt="Projects">
-        </a>
-        <a href="#" class="btn-light">
-          <i class="fas fa-eye"></i> Project
-        </a>
-        <a href="#" class="btn-dark">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-      <div class="item">
-        <a href="#!">
-          <img src="img/projects/project4.jpg" alt="Projects">
-        </a>
-        <a href="#" class="btn-light">
-          <i class="fas fa-eye"></i> Project
-        </a>
-        <a href="#" class="btn-dark">
-          <i class="fab fa-github"></i> Github
-        </a>
-      </div>
-      <div class="item">
-        <a href="#!">
-          <img src="img/projects/project5.jpg" alt="Projects">
-        </a>
-        <a href="#" class="btn-light">
-          <i class="fas fa-eye"></i> Project
-        </a>
-        <a href="#" class="btn-dark">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-      <div class="item">
-        <a href="#!">
-          <img src="img/projects/project6.jpg" alt="Projects">
-        </a>
-        <a href="#" class="btn-light">
-          <i class="fas fa-eye"></i> Project
-        </a>
-        <a href="#" class="btn-dark">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-      <div class="item">
-        <a href="#!">
-          <img src="img/projects/project7.jpg" alt="Projects">
-        </a>
-        <a href="#" class="btn-light">
-          <i class="fas fa-eye"></i> Project
-        </a>
-        <a href="#" class="btn-dark">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
+      {% endfor %}
     </div>
   </main>
 {% endblock content %}
