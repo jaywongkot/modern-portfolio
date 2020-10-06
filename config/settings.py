@@ -128,5 +128,3 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]  # new
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # new
 # MEDIA_ROOT = [str(BASE_DIR.joinpath('media'))]  # doesn't work
-
-AUTH_USER_MODEL = 'users.CustomUser'
