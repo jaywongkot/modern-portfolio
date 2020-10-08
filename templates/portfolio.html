@@ -31,7 +31,7 @@
             </a>
             </li>
             <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'blog' %}" class="nav-link">
                 Blog
             </a>
             </li>
@@ -52,7 +52,7 @@
       Check out some of my projects...
     </h2>
     <div class="projects">
-      {% for project in all_project_list %}
+      {% for project in all_projects_list %}
       <div class="item">
         <a href="{% url 'project_detail' project.pk %}">
           <img src="{{ project.image.url }}" alt="{{ project.title }}">

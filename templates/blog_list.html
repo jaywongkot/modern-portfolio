@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ project.title }}{% endblock title %}
+{% block title %}Blog{% endblock title %}
 
 {% block content %}
   <header>
@@ -25,12 +25,12 @@
                 About Me
             </a>
             </li>
-            <li class="nav-item current">
+            <li class="nav-item">
             <a href="{% url 'portfolio' %}" class="nav-link">
                 My Work
             </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item current">
             <a href="{% url 'blog' %}" class="nav-link">
                 Blog
             </a>
@@ -45,33 +45,25 @@
   </header>
 
   <main id="work">
-      <h1 class="lg-heading">
-        <span class="text-secondary">{{ project.title }}</span>
-      </h1>
-      <h2 class="sm-heading">
-        Let me tell you about this project...
-      </h2>
-      <div class="projects about-info">
-        <img src="{{ project.image.url }}" alt="{{ project.title }}">
-  
-        <div class="job work">
-          <h3 class="text-secondary">Description</h3>
-          <div>
-            <span class="text-secondary">Client:</span> {{ project.client }} | 
-            <span class="text-secondary">Technology:</span> {{ project.technology }}
-          </div>
-
-          <div>
-            <span class="text-secondary">Project Date:</span> {{ project.project_date }} | 
-            <span class="text-secondary">Categories:</span> 
-            {% for category in project.categories.all %} 
-              {{ category.name }} 
-            {% endfor %}
-          </div>
-          <p>{{ project.description }}</p>
-        </div>
+    <h1 class="lg-heading">
+      My <span class="text-secondary">blog</span>
+    </h1>
+    <h2 class="sm-heading">
+      Check out some of my articles...
+    </h2>
+    <div class="projects">
+      {% for post in all_posts_list %}
+      <div class="item">
+        <a href="#" class="btn-light">
+          {{ post.title }}
+        </a>
+        <a href="#" class="btn-dark">
+          <p>{{ post.body }}</p>
+        </a>
       </div>
-    </main>
+      {% endfor %}
+    </div>
+  </main>
 {% endblock content %}
 
 {% block footer %}
