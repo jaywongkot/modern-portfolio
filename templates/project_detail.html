@@ -64,8 +64,10 @@
           <div>
             <span class="text-secondary">Project Date:</span> {{ project.project_date }} | 
             <span class="text-secondary">Categories:</span> 
-            {% for category in project.categories.all %} 
-              {{ category.name }} 
+            {% for category in project.categories.all %}
+                <a href="#">
+                  {{ category.name }}
+                </a> 
             {% endfor %}
           </div>
           <p>{{ project.description }}</p>

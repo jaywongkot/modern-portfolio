@@ -4,9 +4,9 @@ from .models import Project
 
 class ProjectListView(ListView):
     model = Project
+    # We changed a context variable from object_list to project_list
+    context_object_name = 'project_list'
     template_name = 'portfolio.html'
-    # We changed a context variable from object_list to all_projects_list
-    context_object_name = 'all_projects_list'
 
 
 class ProjectDetailView(DetailView):
