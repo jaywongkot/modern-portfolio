@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = "~=3.1.1"
 pillow = "==7.2.0"
+django-crispy-forms = "*"
 
 [requires]
 python_version = "3.8"

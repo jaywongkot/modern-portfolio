@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party app
+    'crispy_forms',
+
     # local apps
     'pages',  # new
     'portfolio',  # new
@@ -128,3 +131,5 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]  # new
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # new
 # MEDIA_ROOT = [str(BASE_DIR.joinpath('media'))]  # doesn't work
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

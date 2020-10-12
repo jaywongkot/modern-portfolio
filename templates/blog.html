@@ -52,14 +52,18 @@
       Check out some of my articles...
     </h2>
     <div class="projects">
-      {% for post in all_posts_list %}
+      {% for post in posts %}
       <div class="item">
-        <a href="#" class="btn-light">
-          {{ post.title }}
-        </a>
-        <a href="#" class="btn-dark">
-          <p>{{ post.body| slice:':200' }}</p>
-        </a>
+        <h2><a href="{% url 'blog_detail' post.pk %}" class="text-secondary">{{ post.title }}</a></h2>
+        <small>
+          {{ post.author }} |&nbsp;
+          {{ post.created_on.date }} |&nbsp;
+          Categories:&nbsp;
+          {% for category in post.categories.all %}
+              <a href="{% url 'blog_category' category.name %}">{{ category.name }},</a>
+          {% endfor %}
+        </small>
+        <p>{{ post.body| slice:':400' }}</p>
       </div>
       {% endfor %}
     </div>
