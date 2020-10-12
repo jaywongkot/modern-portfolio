@@ -1,9 +1,0 @@
-# static/* linguist-vendored
-
-# *.java linguist-detectable=true
-# *.xml linguist-detectable=false
-
-* linguist-vendored
-*.py linguist-vendored=false
-*.js linguist-detectable=false
-*.html linguist-detectable=false
