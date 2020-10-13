@@ -1,10 +1,13 @@
-from django.views.generic import TemplateView
+from django.shortcuts import render
 
-class HomePageView(TemplateView):  # new
-    template_name = 'home.html'
+def index(request):
+    """The home page for modern portfolio"""
+    return render(request, 'home.html')
 
-class AboutPageView(TemplateView):  # new
-    template_name = 'about.html'
+def about(request):
+    """The about page for modern portfolio"""
+    return render(request, 'about.html')
 
-class ContactPageView(TemplateView):  # new
-    template_name = 'contact.html'
+def contact(request):
+    """The contact page for modern portfolio"""
+    return render(request, 'contact.html')
