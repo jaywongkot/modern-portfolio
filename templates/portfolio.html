@@ -52,7 +52,7 @@
       Check out some of my projects...
     </h2>
     <div class="projects">
-      {% for project in project_list %}
+      {% for project in projects %}
       <div class="item">
         <a href="{% url 'project_detail' project.pk %}">
           <img src="{{ project.image.url }}" alt="{{ project.title }}">

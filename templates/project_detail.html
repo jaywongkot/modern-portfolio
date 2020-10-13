@@ -46,7 +46,9 @@
 
   <main id="work">
       <h1 class="lg-heading">
-        <span class="text-secondary">{{ project.title }}</span>
+        <a href="{% url 'portfolio' %}" class="text-secondary">
+          {{ project.title }}
+        </a>
       </h1>
       <h2 class="sm-heading">
         Let me tell you about this project...
@@ -65,7 +67,7 @@
             <span class="text-secondary">Project Date:</span> {{ project.project_date }} | 
             <span class="text-secondary">Categories:</span> 
             {% for category in project.categories.all %}
-                <a href="#">
+                <a href="{% url 'project_category' category.name %}">
                   {{ category.name }}
                 </a> 
             {% endfor %}
