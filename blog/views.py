@@ -1,12 +1,25 @@
 from django.shortcuts import render, get_object_or_404
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from .forms import CommentForm
 from .models import Post, Comment
 
 def blog_list(request):
     posts = Post.objects.all().order_by('-created_on')
+
+    paginator = Paginator(posts, 3) #3 post in each page
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer deliver the first page
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+
     context = {
         'posts': posts,
+        'page': page,
     }
     return render(request, 'blog.html', context)
 
@@ -16,9 +29,21 @@ def blog_category(request, category):
     ).order_by(
         'created_on'
     )
+
+    paginator = Paginator(posts, 3) #3 post in each page
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer deliver the first page
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+
     context = {
         'category': category,
         'posts': posts,
+        'page': page,
     }
     return render(request, 'blog_category.html', context)
 
