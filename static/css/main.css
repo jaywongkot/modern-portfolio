@@ -157,6 +157,11 @@
           transition-delay: 0.4s;
 }
 
+.nav-item:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -199,6 +204,12 @@ h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
   font-size: 6rem;
+}
+
+h1.md-heading,
+h2.md-heading,
+h3.md-heading {
+  font-size: 4rem;
 }
 
 h1.sm-heading,

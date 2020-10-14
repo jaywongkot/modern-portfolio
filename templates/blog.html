@@ -44,14 +44,14 @@
     </nav>
   </header>
 
-  <main id="work">
+  <main id="blog">
     <h1 class="lg-heading">
       My <span class="text-secondary">blog</span>
     </h1>
     <h2 class="sm-heading">
       Check out some of my articles...
     </h2>
-    <div class="projects">
+    <div class="posts">
       {% for post in posts %}
       <div class="item">
         <h2><a href="{% url 'blog_detail' post.pk %}" class="text-secondary">{{ post.title }}</a></h2>

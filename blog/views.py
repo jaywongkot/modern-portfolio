@@ -7,7 +7,7 @@ from .models import Post, Comment
 def blog_list(request):
     posts = Post.objects.all().order_by('-created_on')
 
-    paginator = Paginator(posts, 3) #3 post in each page
+    paginator = Paginator(posts, 4) #4 post in each page
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -30,7 +30,7 @@ def blog_category(request, category):
         'created_on'
     )
 
-    paginator = Paginator(posts, 3) #3 post in each page
+    paginator = Paginator(posts, 4) #4 post in each page
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
