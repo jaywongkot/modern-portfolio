@@ -470,6 +470,19 @@ main#home h1 {
   color: #000000;
 }
 
+.btn-submit {
+  padding: 0.5rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  background: black;
+  color: #ffffff;
+}
+
+.btn-submit:hover {
+  background: #eece1a;
+  color: #000000;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -573,5 +586,15 @@ main#home h1 {
         grid-template-areas: "project-img" "description";
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .blog-detail {
+    margin: auto;
+    padding: 1.5rem;
+    background: #515151;
+    border-bottom: #eece1a 5px solid;
+  }
+  .comment {
+    width: 100%;
+    padding: 0.5rem;
   }
 }

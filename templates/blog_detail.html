@@ -47,7 +47,7 @@
 
   <main id="blog">
     <div class="blog-detail">
-      <h1 class="lg-heading">
+      <h1 class="md-heading">
         <a href="{% url 'blog' %}" class="text-secondary">{{ post.title }}</a>
       </h1>
       <small>
@@ -89,7 +89,7 @@
         <form method="post" style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
           {% csrf_token %}
-          <button type="submit" class="btn btn-dark">Submit</button>
+          <button type="submit" class="btn-submit">Submit</button>
         </form>
         {% endif %}
       </div>
