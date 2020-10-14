@@ -332,6 +332,29 @@ main#home h1 {
   transition: all 0.5s ease-in-out;
 }
 
+.posts {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.7rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.posts .post-list {
+  background: #515151;
+  padding: 0.5rem;
+  border-bottom: #eece1a 5px solid;
+}
+
+.blog-detail {
+  margin: auto;
+  width: 80%;
+  padding: 50px;
+  background: #515151;
+  padding: 3%;
+  border-bottom: #eece1a 5px solid;
+}
+
 .boxes {
   display: -webkit-box;
   display: -ms-flexbox;

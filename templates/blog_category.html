@@ -44,16 +44,16 @@
     </nav>
   </header>
 
-  <main id="work">
+  <main id="blog">
     <h1 class="lg-heading">
       <span class="text-secondary">{{ category | title}}</span>
     </h1>
     <h2 class="sm-heading">
       My articles by category
     </h2>
-    <div class="projects">
+    <div class="posts">
       {% for post in posts %}
-      <div class="item">
+      <div class="post-list">
         <h2><a href="{% url 'blog' %}" class="text-secondary">{{ post.title }}</a></h2>
         <small>
           {{ post.author }} |&nbsp;
