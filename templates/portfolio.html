@@ -66,14 +66,14 @@
       </div>
       {% endfor %}
     </div>
-    <div>
+    <div class="boxes">
       <!-- Adding a paginator to the portfolio page -->
       {% if projects.has_other_pages %}
         {% if projects.has_previous %}
-        <a href="?page={{ projects.previous_page_number }}">&laquo; PREV </a>
+        <a class="btn-prev" href="?page={{ projects.previous_page_number }}">&laquo; PREV </a>
         {% endif %}
         {% if projects.has_next %}
-        <a href="?page={{ projects.next_page_number }}"> NEXT &raquo;</a>
+        <a class="btn-next" href="?page={{ projects.next_page_number }}"> NEXT &raquo;</a>
         {% endif %}
       {% endif %}
     </div>

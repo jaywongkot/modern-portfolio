@@ -49,12 +49,12 @@
       <span class="text-secondary">{{ category | title}}</span>
     </h1>
     <h2 class="sm-heading">
-      My articles by category
+      My {{category | title }} Articles
     </h2>
     <div class="posts">
       {% for post in posts %}
       <div class="post-list">
-        <h2><a href="{% url 'blog' %}" class="text-secondary">{{ post.title }}</a></h2>
+        <h2><a href="{% url 'blog_detail' post.pk %}" class="text-secondary">{{ post.title }}</a></h2>
         <small>
           {{ post.author }} |&nbsp;
           {{ post.created_on.date }} |&nbsp;

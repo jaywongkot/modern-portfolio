@@ -61,10 +61,10 @@
       <p>{{ post.body| linebreaks }}</p>
     </div>
 
-    <div class="col-md-8 card mb-4  mt-3 ">
-      <div class="card-body">
+    <div class="comment">
+      <div>
         <!-- comments -->
-        <h2>{{ comments.count }} comments</h2>
+        <h2 class="text-secondary">{{ comments.count }} comments</h2>
 
         {% for comment in comments %}
         <div class="comments" style="padding: 10px;">
@@ -78,22 +78,22 @@
         </div>
         {% endfor %}
       </div>
-    </div>
-    <div class="col-md-8 card mb-4  mt-3 ">
-      <div class="card-body">
+
+      <div>
         {% if new_comment %}
-        <div class="alert alert-success" role="alert">
+        <div class="text-secondary" role="alert">
           Your comment is awaiting moderation
         </div>
         {% else %}
-        <h3>Leave a comment</h3>
+        <h3 class="text-secondary">Leave a comment</h3>
         <form method="post" style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
           {% csrf_token %}
-          <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+          <button type="submit" class="btn btn-dark">Submit</button>
         </form>
         {% endif %}
       </div>
+
     </div>
   </main>
 {% endblock content %}

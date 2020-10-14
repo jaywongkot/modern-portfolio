@@ -67,14 +67,14 @@
       </div>
       {% endfor %}
     </div>
-    <div>
+    <div class="boxes">
       <!-- Adding paginator to the blog page -->
       {% if posts.has_other_pages %}
         {% if posts.has_previous %}
-          <a href="?page={{ posts.previous_page_number }}">&laquo; PREV </a>
+          <a class="btn-prev" href="?page={{ posts.previous_page_number }}">&laquo; PREV </a>
         {% endif %}
         {% if posts.has_next %}
-          <a href="?page={{ posts.next_page_number }}">NEXT &raquo;</a>
+          <a class="btn-next" href="?page={{ posts.next_page_number }}">NEXT &raquo;</a>
         {% endif %}
       {% endif %}
     </div>

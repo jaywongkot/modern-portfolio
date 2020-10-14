@@ -53,11 +53,11 @@
       <h2 class="sm-heading">
         Let me tell you about this project...
       </h2>
-      <div class="projects about-info">
-        <img src="{{ project.image.url }}" alt="{{ project.title }}">
-  
-        <div class="job work">
-          <h3 class="text-secondary">Description</h3>
+      <div class="project-detail">
+        <img class="project-img" src="{{ project.image.url }}" alt="{{ project.title }}">
+
+        <div class="description">
+          <h2 class="sm-heading text-secondary">Description</h2>
           <div>
             <span class="text-secondary">Client:</span> {{ project.client }} | 
             <span class="text-secondary">Technology:</span> {{ project.technology }}
