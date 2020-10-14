@@ -42,12 +42,18 @@
                 About Me
               </a>
             </li>
-            <li class="nav-item {% if url_name == 'portfolio' %} current {% endif %}">
+            <li class="nav-item 
+            {% if url_name == 'portfolio' or url_name == 'project_detail' or url_name == 'project_category' %} 
+            current 
+            {% endif %}">
               <a href="{% url 'portfolio' %}" class="nav-link">
                 My Work
               </a>
             </li>
-            <li class="nav-item {% if url_name == 'blog' %} current {% endif %}">
+            <li class="nav-item 
+            {% if url_name == 'blog' or url_name == 'blog_detail' or url_name == 'blog_category' %} 
+            current 
+            {% endif %}">
               <a href="{% url 'blog' %}" class="nav-link">
                 Blog
               </a>
