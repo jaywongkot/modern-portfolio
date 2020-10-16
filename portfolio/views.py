@@ -7,7 +7,7 @@ def project_list(request):
     projects = Project.objects.all().order_by('-pk')
 
     paginator = Paginator(projects, 4) # 4 projects in each page
-    page =request.GET.get('page')
+    page = request.GET.get('page')
     try:
         projects = paginator.page(page)
     except PageNotAnInteger:
@@ -34,7 +34,8 @@ def project_category(request, category):
     projects = Project.objects.filter(categories__name__contains=category).order_by('-pk')
     
     paginator = Paginator(projects, 4) # 4 projects in each page
-    page =request.GET.get('page')
+    # Get to current page
+    page = request.GET.get('page')
     try:
         projects = paginator.page(page)
     except PageNotAnInteger:
