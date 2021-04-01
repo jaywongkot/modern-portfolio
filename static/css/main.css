@@ -101,7 +101,7 @@
   height: 250px;
   background: url("../img/portrait.jpg");
   border-radius: 50%;
-  border: solid 3px #f0437e;
+  border: solid 3px #da386f;
 }
 
 .menu .nav-item {
@@ -117,7 +117,7 @@
 }
 
 .menu .nav-item.current > a {
-  color: #f0437e;
+  color: #da386f;
 }
 
 .menu .nav-link {
@@ -134,7 +134,7 @@
 }
 
 .menu .nav-link:hover {
-  color: #f0437e;
+  color: #da386f;
 }
 
 .nav-item:nth-child(1) {
@@ -221,7 +221,7 @@ h3.sm-heading {
 }
 
 a {
-  color: #af1f50;
+  color: #da386f;
   text-decoration: none;
 }
 
@@ -232,7 +232,7 @@ header {
 }
 
 .text-secondary {
-  color: #f0437e;
+  color: #da386f;
 }
 
 main {
@@ -249,7 +249,7 @@ main .icons a {
 }
 
 main .icons a:hover {
-  color: #f0437e;
+  color: #af1f50;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -277,7 +277,7 @@ main#home h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #f0437e 3px solid;
+  border: #da386f 3px solid;
 }
 
 .about-info .bio {
@@ -309,7 +309,7 @@ main#home h1 {
 .about-info .job {
   background: white;
   padding: 0.5rem;
-  border-bottom: #f0437e 5px solid;
+  border-bottom: #da386f 5px solid;
 }
 
 .projects {
@@ -327,7 +327,7 @@ main#home h1 {
 
 .projects img:hover {
   opacity: 0.5;
-  border-color: #f0437e;
+  border-color: #da386f;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -352,7 +352,7 @@ main#home h1 {
 
 .project-detail .project-img:hover {
   opacity: 0.5;
-  border-color: #f0437e;
+  border-color: #da386f;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -365,7 +365,7 @@ main#home h1 {
   padding: 50px;
   background: white;
   padding: 3%;
-  border-bottom: #f0437e 5px solid;
+  border-bottom: #da386f 5px solid;
 }
 
 .posts {
@@ -379,7 +379,7 @@ main#home h1 {
 .posts .post-list {
   background: white;
   padding: 1.5rem;
-  border-bottom: #f0437e 5px solid;
+  border-bottom: #da386f 5px solid;
 }
 
 .blog-detail {
@@ -387,7 +387,7 @@ main#home h1 {
   width: 80%;
   padding: 5rem;
   background: white;
-  border-bottom: #f0437e 5px solid;
+  border-bottom: #da386f 5px solid;
 }
 
 .comment {
@@ -423,7 +423,7 @@ main#home h1 {
 
 .boxes div:hover {
   padding: 0.5rem 1.5rem;
-  background: #f0437e;
+  background: #da386f;
   color: #000000;
 }
 
@@ -439,7 +439,7 @@ main#home h1 {
 }
 
 .btn:hover, .btn-dark:hover, .btn-light:hover {
-  background: #f0437e;
+  background: #da386f;
   color: #000000;
 }
 
@@ -466,7 +466,7 @@ main#home h1 {
 
 .btn-next:hover,
 .btn-prev:hover {
-  background: #f0437e;
+  background: #da386f;
   color: #000000;
 }
 
@@ -479,7 +479,7 @@ main#home h1 {
 }
 
 .btn-submit:hover {
-  background: #f0437e;
+  background: #da386f;
   color: #000000;
 }
 
@@ -591,7 +591,7 @@ main#home h1 {
     margin: auto;
     padding: 1.5rem;
     background: white;
-    border-bottom: #f0437e 5px solid;
+    border-bottom: #da386f 5px solid;
   }
   .comment {
     width: 100%;

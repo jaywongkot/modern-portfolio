@@ -19,17 +19,17 @@
         <div class="description">
           <h2 class="sm-heading text-secondary">Description</h2>
           <div>
-            <span class="text-secondary">Client:</span> {{ project.client }} | 
+            <span class="text-secondary">Client:</span> {{ project.client }} |
             <span class="text-secondary">Technology:</span> {{ project.technology }}
           </div>
 
           <div>
-            <span class="text-secondary">Project Date:</span> {{ project.project_date }} | 
-            <span class="text-secondary">Categories:</span> 
+            <span class="text-secondary">Project Date:</span> {{ project.project_date }} |
+            <span class="text-secondary">Categories:</span>
             {% for category in project.categories.all %}
                 <a href="{% url 'project_category' category.name %}">
                   {{ category.name }}
-                </a> 
+                </a>
             {% endfor %}
           </div>
           <p>{{ project.description }}</p>
@@ -40,6 +40,6 @@
 
 {% block footer %}
   <footer id="main-footer">
-    Copyright &copy; 2020
+    Copyright &copy; 2021
   </footer>
 {% endblock footer %}
