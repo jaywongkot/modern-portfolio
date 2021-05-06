@@ -8,3 +8,4 @@ dist/
 static/scss/
 .vscode
 .idea
+Pipfile-backup
