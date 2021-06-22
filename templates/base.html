@@ -35,6 +35,7 @@
           <div class="portrait"></div>
         </div>
         <ul class="menu-nav">
+          <!-- Highlight current page in navbar -->
           {% with url_name=request.resolver_match.url_name %}
           <li class="nav-item {% if url_name == 'home' %} current {% endif %}">
             <a href="{% url 'home' %}" class="nav-link"> Home </a>
@@ -43,17 +44,17 @@
             <a href="{% url 'about' %}" class="nav-link"> About Me </a>
           </li>
           <li
-            class="nav-item 
-            {% if url_name == 'portfolio' or url_name == 'project_detail' or url_name == 'project_category' %} 
-            current 
+            class="nav-item
+            {% if url_name == 'portfolio' or url_name == 'project_detail' or url_name == 'project_category' %}
+            current
             {% endif %}"
           >
             <a href="{% url 'portfolio' %}" class="nav-link"> My Work </a>
           </li>
           <li
-            class="nav-item 
-            {% if url_name == 'blog' or url_name == 'blog_detail' or url_name == 'blog_category' %} 
-            current 
+            class="nav-item
+            {% if url_name == 'blog' or url_name == 'blog_detail' or url_name == 'blog_category' %}
+            current
             {% endif %}"
           >
             <a href="{% url 'blog' %}" class="nav-link"> Blog </a>
@@ -68,7 +69,7 @@
       </nav>
     </header>
 
-    {% block content %} {% endblock content %} 
+    {% block content %} {% endblock content %}
     {% block footer %} {% endblock footer %}
 
     <script src="{% static 'js/main.js'%}"></script>
